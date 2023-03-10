@@ -5,10 +5,10 @@ class CounterState extends InheritedWidget {
   final Counter model;
 
   const CounterState({
-    Key? key,
-    required Widget child,
+    super.key,
     required this.model,
-  }) : super(key: key, child: child);
+    required super.child,
+  });
 
   static CounterState of(BuildContext context) =>
       context.dependOnInheritedWidgetOfExactType<CounterState>()!;
